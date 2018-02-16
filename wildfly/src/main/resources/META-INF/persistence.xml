@@ -1,0 +1,29 @@
+<persistence
+    version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="examplePU" transaction-type="JTA">
+
+        <!--<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>-->
+        <jta-data-source>java:jboss/datasources/localPostgres</jta-data-source>
+
+        <properties>
+
+            <property name="jboss.as.jpa.providerModule" value="org.hibernate:5.2"/>
+            <!--<property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:5.9.0.Final"/>-->
+            <property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:main"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+
+            <!--<property name="hibernate.search.default.indexmanager" value="elasticsearch"/>-->
+            <!--<property name="hibernate.search.default.elasticsearch.host" value="http://127.0.0.1:9200"/>-->
+            <!--<property name="hibernate.search.default.elasticsearch.index_schema_management_strategy" value="CREATE"/>-->
+            <!--<property name="hibernate.search.default.elasticsearch.required_index_status" value="GREEN"/>-->
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
