@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>model</module>
         <module>wildfly</module>
         <module>normal</module>
     </modules>

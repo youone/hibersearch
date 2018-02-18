@@ -13,16 +13,15 @@
 
             <property name="jboss.as.jpa.providerModule" value="org.hibernate:5.2"/>
 
-            <property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:5.9.0.Beta1"/>
+            <!--use Lucene sarch-->
+            <property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.orm:5.8.2.Final"/>
+
+            <!--use elasticsearch sarch-->
             <!--<property name="wildfly.jpa.hibernate.search.module" value="org.hibernate.search.elasticsearch:5.9.0.Beta1"/>-->
-
-            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>-->
-
-            <!--<property name="hibernate.search.indexing_strategy" value="manual" />-->
-            <!--<property name="hibernate.search.default.indexmanager" value="elasticsearch"/>-->
-            <!--<property name="hibernate.search.default.elasticsearch.host" value="http://127.0.0.1:9200"/>-->
-            <!--<property name="hibernate.search.default.elasticsearch.index_schema_management_strategy" value="CREATE"/>-->
-            <!--<property name="hibernate.search.default.elasticsearch.required_index_status" value="GREEN"/>-->
+            <property name="hibernate.search.default.indexmanager" value="elasticsearch"/>
+            <property name="hibernate.search.default.elasticsearch.host" value="http://127.0.0.1:9200"/>
+            <property name="hibernate.search.default.elasticsearch.index_schema_management_strategy" value="CREATE"/>
+            <property name="hibernate.search.default.elasticsearch.required_index_status" value="YELLOW"/>
 
         </properties>
 

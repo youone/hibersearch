@@ -3,6 +3,7 @@ import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
 @WebServlet(name = "CrudServlet" , urlPatterns = {"/crud"})
+//@WebServlet
 public class CrudServlet extends javax.servlet.http.HttpServlet {
 
 //    private static final Logger logger = Logger.getLogger(CrudServlet.class);
