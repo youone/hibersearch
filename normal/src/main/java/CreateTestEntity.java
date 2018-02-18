@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.Properties;
 
 public class CreateTestEntity
 {
@@ -12,6 +13,7 @@ public class CreateTestEntity
 
     public static void main(String[] args)
     {
+
         logger.debug("starting application....");
 
         final EntityManagerFactory emf = Persistence.createEntityManagerFactory("examplePU");
@@ -25,11 +27,6 @@ public class CreateTestEntity
             testEntity.setName("foo");
             testEntity.setVar(8);
             entityManager.persist(testEntity);
-
-//            TestEntity testEntity2 = new TestEntity();
-//            testEntity2.setName("bar");
-//            testEntity2.setVar(8);
-//            entityManager.persist(testEntity2);
 
             tx.commit();
 

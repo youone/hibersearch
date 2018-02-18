@@ -1,11 +1,13 @@
 import model.TestEntity;
 import org.apache.log4j.Logger;
+import org.hibernate.integrator.spi.Integrator;
 
 import javax.annotation.Resource;
 import javax.ejb.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.UserTransaction;
+import java.util.ServiceLoader;
 
 @Stateless(name = "writebean")
 @TransactionManagement(value = TransactionManagementType.BEAN)
