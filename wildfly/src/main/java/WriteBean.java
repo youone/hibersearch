@@ -32,14 +32,16 @@ public class WriteBean {
         try {
             tx.begin();
 
-            TestEntity testEntity = new TestEntity();
+            TestEntity testEntity = new TestEntity(1,2);
             testEntity.setName("foo1");
             testEntity.setVar(4);
+//            testEntity.addLocation("POINT (4 5)");
             entityManager.persist(testEntity);
 
-            TestEntity testEntity2 = new TestEntity();
+            TestEntity testEntity2 = new TestEntity(2,3);
             testEntity2.setName("foo2");
             testEntity2.setVar(6);
+//            testEntity.addLocation("POINT (8 9)");
             entityManager.persist(testEntity2);
 
             tx.commit();

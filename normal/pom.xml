@@ -42,6 +42,11 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-spatial</artifactId>
+            <version>5.2.13.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search-orm</artifactId>
             <version>5.9.0.Beta1</version>
         </dependency>

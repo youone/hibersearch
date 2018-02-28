@@ -23,9 +23,10 @@ public class CreateTestEntity
         tx.begin();
 
         try {
-            TestEntity testEntity = new TestEntity();
+            TestEntity testEntity = new TestEntity(2,3);
             testEntity.setName("foo");
             testEntity.setVar(8);
+            testEntity.addLocation("POINT (7 8)");
             entityManager.persist(testEntity);
 
             tx.commit();
